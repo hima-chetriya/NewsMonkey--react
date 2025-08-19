@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
-
 export default class NewsItem extends Component {
+  
   render() {
-   let {title,description} = this.props;
+   let {title, description, imageURL, newsurl} = this.props;
         return (
-        <div>
+        <div className='my-3'>
             <div className="card" style={{width: "18rem"}}>
-                <img src="https://ufc.com/images/styles/card/s3/2025-07/081625-ufc-319-du-plessis-vs-chimaev-EVENT-ART.jpg?itok=nAu9tVQ4" className="card-img-top" alt="..."/>
+                <img src={!imageURL?"https://media.cnn.com/api/v1/images/stellar/prod/download-20250818065358299.png?c=16x9&q=w_800,c_fill":imageURL} className="card-img-top" alt="..."/>
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{description}</p>
-                        <a href="/newsdetails" className="btn btn-primary">Go somewhere</a>
+                        <a href={newsurl} target='_blank'  className="btn btn-sm btn-primary">Read More</a>
                     </div>
             </div>
-        
+    
       </div>
     )
   }
