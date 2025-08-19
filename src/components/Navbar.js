@@ -17,11 +17,10 @@ export class Navbar extends Component {
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">About</a>
+                                    {/* You are beautiful */}
                                 </li>
-
                             </ul>
                         </div>
-                        
                     </div>
                 </nav>
 
